@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="SearchAction" class="com.movies.action.SearchDetailsAction" >            
+            <result name="success">/results.jsp</result>
+        </action>
+        <action name="LoginAction" class="com.movies.action.LoginAction" >            
+            <result name="success">/authenticator.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
+    </package>
+    <constant name="struts.action.excludePattern" value="/DuoFrameServlet,/GoogleAuthenticatorServlet,/AuthenticationServlet" />
+
+</struts>
