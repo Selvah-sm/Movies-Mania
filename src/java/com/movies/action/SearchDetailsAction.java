@@ -170,7 +170,7 @@ public class SearchDetailsAction extends ActionSupport{
                         obj = new MovieDetailPOJO();
                         tmp =  (JSONObject) jarray.get(i);
                         long id = (long) tmp.get("id");
-                        String tmpQuery = "https://api.themoviedb.org/3/person/"+id+"?api_key=d756bfc1b32812fb7ba3657c38256fe&language=en-US";                        
+                        String tmpQuery = "https://api.themoviedb.org/3/person/"+id+"?api_key=d75fc1b32812fb7ba3657c38256fe&language=en-US";                        
                         JSONObject jsonObject = (JSONObject)Utils.MakeApiCall(tmpQuery);  
                         String imdb_id = (String)jsonObject.get("imdb_id");
                         if(imdb_id != null && !imdb_id.trim().isEmpty()) {  
